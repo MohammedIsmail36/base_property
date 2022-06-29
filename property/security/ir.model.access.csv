@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_main_property_user,access.main.property,model_main_property,,1,1,1,1
+access_sub_property_user,access.sub.property,model_sub_property,,1,1,1,1
+access_property_type_user,access.property.type,model_property_type,,1,1,1,1

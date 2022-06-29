@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="main_property_details_report_action" model="ir.actions.report">
+            <field name="name">Main Property Details</field>
+            <field name="model">main.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">property.main_property_details_report_temp</field>
+            <field name="report_file">property.main_property_details_report_temp</field>
+            <field name="binding_model_id" ref="model_main_property"/>
+            <field name="binding_type">report</field>
+        </record>
+
+		<record id="main_property_details_report_action_a" model="ir.actions.report">
+            <field name="name">Main Property Details a</field>
+            <field name="model">main.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">property.main_property_details_report_temp_a</field>
+            <field name="report_file">property.main_property_details_report_temp_a</field>
+            <field name="binding_model_id" ref="model_main_property"/>
+            <field name="binding_type">report</field>
+        </record>
+
+   		<record id="main_property_details_report_action_b" model="ir.actions.report">
+            <field name="name">Main Property Details b</field>
+            <field name="model">main.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">property.main_property_details_report_temp_b</field>
+            <field name="report_file">property.main_property_details_report_temp_b</field>
+            <field name="binding_model_id" ref="model_main_property"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="main_property_details_report_action_c" model="ir.actions.report">
+            <field name="name">Main Property Details c</field>
+            <field name="model">main.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">property.main_property_details_report_temp_c</field>
+            <field name="report_file">property.main_property_details_report_temp_c</field>
+            <field name="binding_model_id" ref="model_main_property"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+
+
+
+
+
+
+
+	</data>
+</odoo>

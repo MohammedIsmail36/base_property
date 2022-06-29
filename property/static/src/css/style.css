@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    font-family: Roboto;
+}
+
+td{
+    border: 1px solid gray;
+  }
+
+.invoice-title{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-top: -50px;
+}
+
+.tb-header{
+    background-color: gray;
+    text-align: center;
+    color: white;
+    width:430px;
+    border: 1px solid blue;
+}
+
+.td-left{
+    text-align: left;
+}
+
+.td-center{
+    text-align: center;
+}
+
+.td-right{
+    text-align: right;
+}
+
+.w-200{
+    width: 200px;
+}
+.w-340{
+    width: 340px;
+}
+
+.w-170{
+    width: 170px;
+}
+
+.w-260{
+    width: 260px;
+}
+
+.w-100{
+    width: 100px;
+}
+
+.w-225{
+    width: 225px;
+}
+

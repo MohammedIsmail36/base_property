@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--
+        ======================
+        === Tree View ========
+        ======================
+        -->
+        <record id="view_sub_property_tree" model="ir.ui.view">
+            <field name="name">sub.property.tree</field>
+            <field name="model">sub.property</field>
+            <field name="arch" type="xml">
+                <tree string="Sub Property Tree">
+                    <field name="name"/>
+                    <field name="property_type_id"/>
+                    <field name="main_property_id"/>
+                    <field name="contract_type"/>
+                    <field name="unit_rent" sum="Sum Rent"/>
+                    <field name="count_room"/>
+                    <field name="count_council"/>
+                    <field name="count_toilet"/>
+                    <field name="unit_status"/>
+                </tree>
+            </field>
+        </record>
+        <!--
+        ======================
+        === Form View ========
+        ======================
+         -->
+        <record id="view_sub_property_form" model="ir.ui.view">
+            <field name="name">sub.property.form</field>
+            <field name="model">sub.property</field>
+            <field name="arch" type="xml">
+                <form string="Sub Properties">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+
+                        </div>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;}"/>
+                        <div class="oe_title">
+                              <h1>
+                                  <field name="name"/>
+                              </h1>
+                        </div>
+                        <group string="Main Information">
+                            <group>
+                                <field name="active" invisible="1"/>
+                                <field name="main_property_id"/>
+                                <field name="property_type_id"/>
+                            </group>
+                            <group>
+                                <field name="contract_type"/>
+                                <field name="unit_status"/>
+                                <field name="unit_rent"/>
+
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Components">
+                                <group>
+                                    <group>
+                                        <field name="count_room"/>
+                                        <field name="count_council"/>
+                                        <field name="count_toilet"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="o_attachment_preview"/>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

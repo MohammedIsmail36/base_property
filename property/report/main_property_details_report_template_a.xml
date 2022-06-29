@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="main_property_details_report_temp_a">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <link rel="stylesheet" href="/property/static/src/css/style.css"/>
+                        <h3 class="invoice-title">فاتورة ضريبة / Tax Invoice</h3>
+                        <div>
+                            <div style="float: left; width: 740px;">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td class="td-left" >
+                                                <strong>
+                                                    <span>Number Invoice</span>
+                                                </strong>
+                                            </td>
+                                            <td class="td-center" >
+                                                Invo-121/121/1212
+                                            </td>
+                                            <td class="td-right" >
+                                                <strong>
+                                                    <span>رقم الفاتورة</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-left w-200">
+                                                <strong>
+                                                    <span>Date Issue Invoice</span>
+                                                </strong>
+                                            </td>
+                                            <td class="td-center w-340">2020-01-17</td>
+                                            <td class="td-right w-200">
+                                                <strong>
+                                                    <span>تاريخ اصدار الفاتورة</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-left">
+                                                <strong>
+                                                    <span>Street Name</span>
+                                                </strong>
+                                            </td>
+                                            <td class="td-center">2021-01-04</td>
+                                            <td class="td-right">
+                                                <strong>
+                                                    <span>تاريخ التوريد</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div style="float: right; width: 120px;">
+                                <div style="background-color: red;">
+                                    QR Code
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: left; height: 20px;"></div>
+                        <div >
+                            <div >
+                                <div>
+                                    <!-- Table  Customer And Vendor-->
+                                    <table>
+                                        <!-- Table Header-->
+                                        <tr class="tr-header">
+                                            <td class="tb-header" colspan="2" >
+                                                <strong>
+                                                    <span>Seller/</span>
+                                                    <span>المورد</span>
+                                                </strong>
+                                            </td>
+                                            <td class="tb-header" colspan="2" >
+                                                <strong>
+                                                    <span>Buyer/</span>
+                                                    <span>customer</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <!--  rows-->
+                                        <!-- Row 01-->
+                                        <tr class="tr-header">
+                                            <td class="td-left w-170" ><strong><span>Name</span></strong></td>
+                                            <td class="td-center w-260"><strong><span>الامير جلوي بن عبد العزيز بن مساعد ال سعود</span></strong></td>
+                                            <td class="td-center w-260"><strong><span>البنك العربي الوطني</span></strong></td>
+                                            <td class="td-right w-170" ><strong><span>الاسم</span></strong></td>
+                                        </tr>
+                                        <!-- Row 02-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Building No</span></strong></td>
+                                            <td class="td-center"><strong><span>3839</span></strong></td>
+                                            <td class="td-center"><strong><span>7317</span></strong></td>
+                                            <td class="td-right" ><strong><span>رقم المبنى</span></strong></td>
+                                        </tr>
+                                        <!-- Row 03-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Street Name</span></strong></td>
+                                            <td class="td-center"><strong><span>شارع جبر بن رشيد</span></strong></td>
+                                            <td class="td-center"><strong><span>الملك فيصل</span></strong></td>
+                                            <td class="td-right" ><strong><span>اسم الشارع </span></strong></td>
+                                        </tr>
+                                        <!-- Row 04-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>District</span></strong></td>
+                                            <td class="td-center"><strong><span> حي المربع</span></strong></td>
+                                            <td class="td-center"><strong><span>حي المربع</span></strong></td>
+                                            <td class="td-right" ><strong><span>الحي </span></strong></td>
+                                        </tr>
+                                        <!-- Row 05-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>City</span></strong></td>
+                                            <td class="td-center"><strong><span> الرياض</span></strong></td>
+                                            <td class="td-center"><strong><span>الرياض</span></strong></td>
+                                            <td class="td-right" ><strong><span>المدينة </span></strong></td>
+                                        </tr>
+                                        <!-- Row 06-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Country</span></strong></td>
+                                            <td class="td-center"><strong><span>المملكة العربية السعودية</span></strong></td>
+                                            <td class="td-center"><strong><span>المملكة العربية السعودية</span></strong></td>
+                                            <td class="td-right" ><strong><span>البلد </span></strong></td>
+                                        </tr>
+                                        <!-- Row 07-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Postal Code</span></strong></td>
+                                            <td class="td-center"><strong><span>12613</span></strong></td>
+                                            <td class="td-center"><strong><span>12613</span></strong></td>
+                                            <td class="td-right" ><strong><span>الرمز البريدي </span></strong></td>
+                                        </tr>
+                                         <!-- Row 08-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Additional No</span></strong></td>
+                                            <td class="td-center"><strong><span>7239</span></strong></td>
+                                            <td class="td-center"><strong><span>3536</span></strong></td>
+                                            <td class="td-right" ><strong><span>الرقم الاضافي للعنوان </span></strong></td>
+                                        </tr>
+                                          <!-- Row 09-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Vat No</span></strong></td>
+                                            <td class="td-center"><strong><span>310204029900003</span></strong></td>
+                                            <td class="td-center"><strong><span>300000313900003</span></strong></td>
+                                            <td class="td-right" ><strong><span>رقم تسجيل ض ق م </span></strong></td>
+                                        </tr>
+                                          <!-- Row 10-->
+                                        <tr class="tr-header">
+                                            <td class="td-left" ><strong><span>Other ID</span></strong></td>
+                                            <td class="td-center"><strong><span>---</span></strong></td>
+                                            <td class="td-center"><strong><span>---</span></strong></td>
+                                            <td class="td-right" ><strong><span>معرف اخر </span></strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

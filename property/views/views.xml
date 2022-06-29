@@ -1,0 +1,81 @@
+<odoo>
+    <data>
+        <!--
+        ================================
+        === act_window:  Master Data ===
+        ================================
+         -->
+       <!-- Main Properties Action Window-->
+        <record model="ir.actions.act_window" id="main_property_action_window">
+            <field name="name">Main Properties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">main.property</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create New Main Property! </p>
+            </field>
+        </record>
+
+        <!-- Sub Properties Action Window-->
+        <record model="ir.actions.act_window" id="sub_property_action_window">
+            <field name="name">Sub Properties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sub.property</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create New Sub Property! </p>
+            </field>
+        </record>
+
+        <!-- Sub Properties Action Window-->
+        <record model="ir.actions.act_window" id="property_type_action_window">
+            <field name="name">Property Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">property.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Create New Type Of Property! </p>
+            </field>
+        </record>
+
+
+        <!-- Top menu item -->
+        <menuitem name="Property" id="root_menu" web_icon="property,static/description/icon.png"/>
+        <!-- menu categories -->
+        <menuitem name="Master Data" id="master_data_menu" parent="root_menu"/>
+        <menuitem name="Configuration" id="confing_data_menu" parent="root_menu"/>
+        <!--
+        =============================
+        ==== Sub menu categories ====
+        =============================
+        -->
+        <!-- Sub Main Data Menu -->
+<!--        <menuitem name="Property" id="sub_menu_property" parent="config_menu" sequence="1"/>-->
+        <!--
+        =============================
+        === ACTIONS : MASTER DATA ===
+        =============================
+        -->
+        <!-- menu item -->
+        <menuitem
+                name="Main Properties"
+                id="main_properties_menu"
+                parent="master_data_menu"
+                action="main_property_action_window"
+                sequence="0"/>
+
+        <menuitem
+                name="Sub Properties"
+                id="sub_properties_menu"
+                parent="master_data_menu"
+                action="sub_property_action_window"
+                sequence="1"/>
+
+        <menuitem
+                name="Property Type"
+                id="property_type_menu"
+                parent="confing_data_menu"
+                action="property_type_action_window"
+                sequence="0"/>
+    </data>
+</odoo>

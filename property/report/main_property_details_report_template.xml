@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="main_property_details_report_temp">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.basic_layout">
+                    <div class="page">
+                        <link rel="stylesheet" href="/property/static/src/css/style.css"/>
+                        <h3 style="text-align: center; margin-top: -40px; margin-bottom: 10px;">فاتورة ضريبة / Tax Invoice</h3>
+                        <div style="height: 120px;">
+                            <div style="float: left; width: 75%;">
+                                <div style="margin-top: 20px;">
+                                    <table>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Number Invoice</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                Invo-121/121/1212
+                                            </td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>رقم الفاتورة</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Date Issue Invoice</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">2020-01-17</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>تاريخ اصدار الفاتورة</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Street Name</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">2021-01-04</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>تاريخ التوريد</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div style="float: right; width: 25%;">
+                                <div style="background-color: gray; width: 120px; height: 120px; float: right;">
+                                    QR Code
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: left; height: 20px;"></div>
+                        <div >
+                            <div style="float: left; width: 50%;">
+                                <!-- Table Seller Left-->
+                                <div>
+                                    <table>
+                                        <tr class="tr-header">
+                                            <td colspan="3" style="text-align: center; color: white;">
+                                                <strong>
+                                                    <span>Seller/</span>
+                                                    <span>المورد</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Name</span>
+                                                </strong>
+                                            </td>
+                                            <td class="text-center" style="text-align: center;">
+                                              الامير جلوي بن عبد العزيز بن مساعد ال سعود
+                                            </td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الاسم</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Building No</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">3839</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>رقم المبنى</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Street Name</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">شارع جبر بن رشيد</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>اسم الشارع</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>District</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">حي المربع</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الحي</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>City</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">الرياض</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>المدينة</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Country</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">المملكة العربية السعودية
+                                            </td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>البلد</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Postal Code</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">12613</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الرمز البريدي</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Additional No</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">7239</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الرقم الاضافي</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>VAT Number</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">310204029900003</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>تسجيل ض ق م</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Other ID</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">310204029900003</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>معرف اخر</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div style="float: right; width: 50%;">
+                                <!-- Table Buyer Left-->
+                                <div>
+                                    <table>
+                                        <tr class="tr-header">
+                                            <td colspan="3" style="text-align: center; color: white;">
+                                                <strong>
+                                                    <span>Seller/</span>
+                                                    <span>المورد</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Name</span>
+                                                </strong>
+                                            </td>
+                                            <td class="text-center" style="text-align: center;">
+                                                Mohammed Ahmed Ali Ismail
+                                            </td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الاسم</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Building No</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">3839</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>رقم المبنى</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Street Name</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">شارع جبر بن رشيد</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>اسم الشارع</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>District</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">حي المربع</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الحي</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>City</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">الرياض</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>المدينة</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Country</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">المملكة العربية السعودية
+                                            </td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>البلد</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Postal Code</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">12613</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الرمز البريدي</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Additional No</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">7239</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>الرقم الاضافي</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>VAT Number</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">310204029900003</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>تسجيل ض ق م</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <strong>
+                                                    <span>Other ID</span>
+                                                </strong>
+                                            </td>
+                                            <td style="text-align: center;">310204029900003</td>
+                                            <td style="text-align: right;">
+                                                <strong>
+                                                    <span>معرف اخر</span>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
