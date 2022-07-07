@@ -11,6 +11,24 @@ class SubProperty(models.Model):
     _order = 'name'
     _rec_name = 'name'
 
+    # Get Journal items
+    def _get_invoice_count(self):
+            for rec in self:
+                    count = self.env['account.move'].search_count([('invoice_line_ids.sub_property_ids', '=', rec.id)])
+                    rec.invoice_count = count
+
+    # Smart Button Function ( button Box Invoice)
+    def open_invoice(self):
+            return {
+                    'name': 'Invoice',
+                    'view_type': 'form',
+                    'domain': [('invoice_line_ids.sub_property_ids', '=', self.id)],
+                    'res_model': 'account.move',
+                    'view_id': False,
+                    'view_mode': 'tree,form',
+                    'type': 'ir.actions.act_window',
+            }
+
 
     name = fields.Char(string='Name', required=True)
     main_property_id = fields.Many2one(comodel_name="main.property",
@@ -34,6 +52,10 @@ class SubProperty(models.Model):
     count_room = fields.Integer(string='Rooms', default=0, tracking=True)
     count_council = fields.Integer(string='Councils', default=0, tracking=True)
     count_toilet = fields.Integer(string='Toilet', default=0, tracking=True)
+    # Smart Button
+    invoice_count = fields.Integer(string="Invoice Count", required=False, compute='_get_invoice_count')
+
+
 
     # Constrains Duplicate Name
     @api.constrains('sub_property_number')

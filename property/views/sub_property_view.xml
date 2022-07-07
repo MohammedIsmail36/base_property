@@ -35,7 +35,13 @@
                 <form string="Sub Properties">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-
+                            <!-- 03 - Smart Button Invoice -->
+                            <button name="open_invoice" type="object"
+                                    class="oe_stat_button" icon="fa-edit"
+                                    context="{}"
+                                    attrs="{}">
+                                <field string="Invoice" name="invoice_count" widget="statinfo"/>
+                            </button>
                         </div>
                         <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                         <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image&quot;}"/>

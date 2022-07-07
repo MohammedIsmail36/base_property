@@ -40,8 +40,7 @@ class MainProperty(models.Model):
             count = self.env['account.move.line'].search_count([('main_property_id', '=', rec.id)])
             rec.journal_items_count = count
 
-        # Smart Button Function ( button Box sub Property)
-
+    # Smart Button Function ( button Box Journal items)
     def open_journal_items(self):
         return {
             'name': 'Journal Items',
@@ -53,7 +52,23 @@ class MainProperty(models.Model):
             'type': 'ir.actions.act_window',
         }
 
+    # Get Journal items
+    def _get_invoice_count(self):
+        for rec in self:
+            count = self.env['account.move'].search_count([('invoice_line_ids.main_property_id', '=', rec.id)])
+            rec.invoice_count = count
 
+    # Smart Button Function ( button Box Invoice)
+    def open_invoice(self):
+        return {
+            'name': 'Invoice',
+            'view_type': 'form',
+            'domain': [('invoice_line_ids.main_property_id', '=', self.id)],
+            'res_model': 'account.move',
+            'view_id': False,
+            'view_mode': 'tree,form',
+            'type': 'ir.actions.act_window',
+        }
 
 
 
@@ -105,6 +120,7 @@ class MainProperty(models.Model):
     # Smart Buttons Fields
     sub_property_count = fields.Integer(string="Sub Properties", required=False, compute='_get_sub_property_count')
     journal_items_count = fields.Integer(string="Journal Items", required=False, compute='_get_journal_items')
+    invoice_count = fields.Integer(string="Invoice Count", required=False, compute='_get_invoice_count')
 
 
     # ========= CONSTRAINS ============

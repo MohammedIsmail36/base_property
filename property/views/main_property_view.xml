@@ -105,10 +105,17 @@
 
                             <!-- 02 - Smart Button Journal items-->
                             <button name="open_journal_items" type="object"
-                                    class="oe_stat_button" icon="fa-home"
+                                    class="oe_stat_button" icon="fa-bars"
                                     context="{}"
                                     attrs="{}">
                                 <field string="Journal Items" name="journal_items_count" widget="statinfo"/>
+                            </button>
+                            <!-- 03 - Smart Button Journal items-->
+                            <button name="open_invoice" type="object"
+                                    class="oe_stat_button" icon="fa-edit"
+                                    context="{}"
+                                    attrs="{}">
+                                <field string="Invoice" name="invoice_count" widget="statinfo"/>
                             </button>
 
                         </div>
